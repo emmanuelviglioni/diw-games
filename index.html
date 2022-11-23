@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <title>Home</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+
+<body>
+  <div class="head">
+    <div>
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#"><img
+              src="https://th.bing.com/th/id/R.8205051c3acd1fe1c3b7480e3130407f?rik=4IDSrWuRn0pBcw&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fen%2f3%2f36%2fEvo_Championship_Series_Logo.png&ehk=NJJFKzFapMLU9ycDbdjgQUDoKLcI5u70jBBRd8gCU%2bM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+              style="height: 40px; margin-right: 8px;" alt=""></a>
+          <!-- No campo src coloque a imagem que você queria colocar no site -->
+          <a class="navbar-brand text-light" href="#">nome</a><!-- Coloque o nome da pagina -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="align-items: flex-end;">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <form class="d-flex" role="search">
+              <a href="./pesquisa.html" class="btn btn-outline-primary" type="submit">Procurar <i
+                  class="bi bi-search"></i></a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <h3 style="align-self: center; margin: 10px; background-color: #f8f9fa;">Jogos em Destaque</h3>
+    <!-- Carrosel da pagina-->
+    <div class="car" style="background-color: #f8f9fade; margin-bottom: 10px;">
+      <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-label="Slide 1" aria-current="true"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+            class=""></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+            class=""></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"
+            class=""></button>
+        </div>
+        <div class="container carousel-inner" id="carouselAP">
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container ibody" style="margin-top: 15px;">
+    <hr>
+    <h5>Jogos que você possa gostar:</h5>
+    <!-- Lista dos jogos em formato de Card -->
+    <div class="lista-jogos" id="listaJogos">
+
+    </div>
+    <hr>
+    <div class="pub">
+      <div style="cursor: pointer;cursor: pointer;display: flex;justify-content: space-between;align-items: center;"
+        data-bs-toggle="collapse" data-bs-target="#collapseP" aria-expanded="false" aria-controls="collapseP"
+        onclick="setinha(1)">
+        <h5 style="margin-top: 10px;">Principais plataformas</h5>
+        <h5 id="c1"><i class="bi bi-chevron-down"></i></h5>
+      </div>
+      <div class="collapse" id="collapseP">
+        <hr>
+        <div class="pub-card" id="plataformaJogos" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        </div>
+      </div>
+      <hr>
+      <div style="cursor: pointer;cursor: pointer;display: flex;justify-content: space-between;align-items: center;"
+        data-bs-toggle="collapse" data-bs-target="#collapseD" aria-expanded="false" aria-controls="collapseD"
+        onclick="setinha(2)">
+        <h5 style="margin-top: 10px;">Principais desenvolvedores de jogos</h5>
+        <h5 id="c2"><i class="bi bi-chevron-down"></i></h5>
+      </div>
+      <div class="collapse" id="collapseD">
+        <hr>
+        <div class="pub-card" id="publishers" style="display: flex; flex-wrap: wrap; justify-content: center;">
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div style="cursor: pointer;cursor: pointer;display: flex;justify-content: space-between;align-items: center;"
+      data-bs-toggle="collapse" data-bs-target="#collapseL" aria-expanded="false" aria-controls="collapseL"
+      onclick="setinha(3)">
+      <h5 style="margin-top: 10px;">Principais lojas de Jogos</h5>
+      <h5 id="c3"><i class="bi bi-chevron-down"></i></h5>
+    </div>
+    <div class="collapse" id="collapseL">
+      <hr>
+      <div class="pub-card" id="gstore" style="display: flex; flex-wrap: wrap; justify-content: center;">
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="foot" style="display: flex; align-items: center; flex-wrap: wrap;">
+    <div class="container" style="width: 25rem;">
+      <h3>Sobre o Desenvolvedor</h3>
+      <p>Nome: Nome</p><!-- Coloque seu nome -->
+      <p>Curso: Engenharia de Software</p>
+      <p>Matricula: NaN</p><!-- Coloque o numero de matricula -->
+    </div>
+    <div class="container" style="width: 25rem;">
+      <h3>Editorial</h3>
+      <div style="padding: 15px 0px 0px 0px;">
+        <p><i class="fa-sharp fa-solid fa-user"><strong>Pesquisador: </strong> Underfined</i></p><!-- Coloque seu nome completo -->
+        <p><i class="fa-solid fa-user"><strong>Redator: </strong> Underfined</i></p><!-- Coloque seu nome completo -->
+        <p><i class="fa-solid fa-user"><strong>Editor chefe: </strong> Underfined</i></p><!-- Coloque seu nome completo -->
+      </div>
+      <h4>Siga-nos nas redes sociais</h4>
+      <div>
+        <i class="bi bi-youtube"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-instagram"></i>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+
+  <div class="d-footer">
+    <p style="padding-top: 8px; align-self:center;"> Copyright 2020 - Disciplina de Desevolvimento de Interfaces Web -
+      <strong>ICEI PUC MINAS</strong>
+    </p>
+    <img
+      src="https://th.bing.com/th/id/R.8205051c3acd1fe1c3b7480e3130407f?rik=4IDSrWuRn0pBcw&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fen%2f3%2f36%2fEvo_Championship_Series_Logo.png&ehk=NJJFKzFapMLU9ycDbdjgQUDoKLcI5u70jBBRd8gCU%2bM%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+      style="width: 50px; align-self: end;"><!-- No campo src coloque a imagem que deseja usar -->
+  </div>
+</footer>
+<script src="./src/index.js"></script>
+
+</html>
